@@ -4,6 +4,7 @@ body, html {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .front {
@@ -28,7 +29,7 @@ body, html {
   font-style: normal;
   font-weight: 500;
   font-size: 48px;
-  line-height: 56px;
+  line-height: 1.2;
 }
 
 .front p span {
@@ -37,6 +38,13 @@ body, html {
   background: linear-gradient(to right, #21D4FD, #B721FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 720px) {
+  .front p {
+    padding-left: 10vw;
+    font-size: 35px;
+  }
 }
 
 .front .more {
@@ -83,6 +91,14 @@ body, html {
           transform: scale(0.9);
 }
 
+@media (max-width: 720px) {
+  .front .more {
+    width: 150px;
+    margin-left: 10vw;
+    font-size: 20px;
+  }
+}
+
 @-webkit-keyframes slide {
   0% {
     opacity: 0.1;
@@ -118,8 +134,6 @@ body, html {
 .expanded {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 .expanded .background {
@@ -127,6 +141,12 @@ body, html {
   width: 100%;
   height: auto;
   z-index: -500;
+}
+
+@media (max-width: 720px) {
+  .expanded .background {
+    content: url("./background2.svg");
+  }
 }
 
 .details {
@@ -140,8 +160,27 @@ body, html {
       grid-template-columns: auto auto;
 }
 
+@media (max-width: 720px) {
+  .details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .details .profile {
   width: 50vw;
+}
+
+@media (max-width: 720px) {
+  .details .profile {
+    margin-top: 9vw;
+    width: 80vw;
+  }
 }
 
 .details .profile .profilePic {
@@ -151,6 +190,13 @@ body, html {
   margin: 0;
   padding: 0;
   width: 20vw;
+}
+
+@media (max-width: 720px) {
+  .details .profile .profilePic {
+    left: 25vw;
+    width: 45vw;
+  }
 }
 
 .details .profile div {
@@ -169,9 +215,22 @@ body, html {
   line-height: 1.1;
 }
 
+@media (max-width: 720px) {
+  .details .profile div h3 {
+    font-size: 8vw;
+  }
+}
+
 .details .profile div h3.designation {
   font-size: 2vw;
   margin-left: 7vw;
+}
+
+@media (max-width: 720px) {
+  .details .profile div h3.designation {
+    margin-left: 25vw;
+    font-size: 5vw;
+  }
 }
 
 .details .profile img {
@@ -191,10 +250,26 @@ body, html {
   left: 28vw;
 }
 
+@media (max-width: 720px) {
+  .details .profile img.git {
+    width: 8vw;
+    top: 12vw;
+    left: 64vw;
+  }
+}
+
 .details .profile img.fb {
   width: 4.1vw;
   top: 10vw;
   left: 28vw;
+}
+
+@media (max-width: 720px) {
+  .details .profile img.fb {
+    width: 8vw;
+    top: 9vw;
+    left: 65vw;
+  }
 }
 
 .details .profile img.insta {
@@ -203,10 +278,26 @@ body, html {
   left: 26vw;
 }
 
+@media (max-width: 720px) {
+  .details .profile img.insta {
+    width: 10vw;
+    top: 0vw;
+    left: 62vw;
+  }
+}
+
 .details .profile img.linkedin {
   width: 5vw;
   top: 0vw;
   left: 19vw;
+}
+
+@media (max-width: 720px) {
+  .details .profile img.linkedin {
+    width: 12vw;
+    top: -14vw;
+    left: 50vw;
+  }
 }
 
 .details .services {
@@ -214,10 +305,24 @@ body, html {
   color: #fff;
 }
 
+@media (max-width: 720px) {
+  .details .services {
+    margin-top: 15vw;
+  }
+}
+
 .details .services .serviceHeader {
   margin-top: 10vw;
   margin-bottom: 0;
   font-size: 3vw;
+}
+
+@media (max-width: 720px) {
+  .details .services .serviceHeader {
+    margin-top: 15vw;
+    margin-left: 2vw;
+    font-size: 5vw;
+  }
 }
 
 .details .services .serviceGrid {
@@ -227,6 +332,17 @@ body, html {
       grid-template-columns: auto auto;
   -ms-grid-rows: auto auto;
       grid-template-rows: auto auto;
+}
+
+@media (max-width: 720px) {
+  .details .services .serviceGrid {
+    margin-left: 5vw;
+    margin-top: 2vw;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+  }
 }
 
 .details .services .serviceGrid div {
@@ -251,6 +367,13 @@ body, html {
       align-self: center;
 }
 
+@media (max-width: 720px) {
+  .details .services .serviceGrid div img {
+    width: 13vw;
+    height: 13vw;
+  }
+}
+
 .details .services .serviceGrid div .description {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -271,9 +394,119 @@ body, html {
   font-size: 1.5vw;
 }
 
+@media (max-width: 720px) {
+  .details .services .serviceGrid div .description h5 {
+    font-size: 3vw;
+  }
+}
+
 .details .services .serviceGrid div .description p {
   margin: 0;
   padding: 0;
   font-size: 1vw;
+}
+
+@media (max-width: 720px) {
+  .details .services .serviceGrid div .description p {
+    font-size: 2vw;
+  }
+}
+
+.contacts {
+  position: relative;
+  top: 58vw;
+  left: 70vw;
+  width: 25vw;
+  font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 720px) {
+  .contacts {
+    top: 189vw;
+    left: 43vw;
+    width: 50vw;
+  }
+}
+
+.contacts h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 3vw;
+}
+
+@media (max-width: 720px) {
+  .contacts h2 {
+    font-size: 7vw;
+  }
+}
+
+.contacts h4 {
+  margin: 0;
+  margin-left: 1vw;
+  padding: 0;
+  font-size: 1.3vw;
+}
+
+@media (max-width: 720px) {
+  .contacts h4 {
+    font-size: 2.5vw;
+  }
+}
+
+.contacts .contactMe img {
+  position: absolute;
+  width: 6vw;
+  top: -2vw;
+  left: 18vw;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 720px) {
+  .contacts .contactMe img {
+    width: 10vw;
+    top: -1vw;
+    left: 41vw;
+  }
+}
+
+.contacts .contactMe img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.contacts .cd {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-left: 6vw;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  .contacts .cd {
+    margin-left: 11vw;
+  }
+}
+
+.contacts .cd:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.contacts .cd img {
+  width: 2vw;
+}
+
+@media (max-width: 720px) {
+  .contacts .cd img {
+    width: 4vw;
+  }
 }
 /*# sourceMappingURL=style.css.map */

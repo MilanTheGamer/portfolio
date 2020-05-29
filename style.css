@@ -204,6 +204,13 @@ body, html {
   top: 10vw;
   left: 11vw;
   margin-top: 1vw;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.details .profile div:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .details .profile div h3 {
@@ -508,5 +515,10 @@ body, html {
   .contacts .cd img {
     width: 4vw;
   }
+}
+
+.contacts .cd a {
+  text-decoration: none;
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */

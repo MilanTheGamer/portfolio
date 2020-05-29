@@ -125,6 +125,37 @@ body,html{
                 }
             }
         }
+        img{
+            position: relative;
+            transition: all 0.5s ease-in-out;
+
+            &:hover{
+                transform: scale(1.1);
+            }
+
+            &.git{
+                width: 4vw;
+                top:12vw;
+                left:28vw
+            }
+            &.fb{
+                width: 4.1vw;
+                top:10vw;
+                left:28vw
+            }
+            &.insta{
+                width: 4.7vw;
+                top:5.5vw;
+                left:26vw
+            }
+            &.linkedin{
+                width: 5vw;
+                top:0vw;
+                left:19vw
+            }
+            
+
+        }
         
     }
     .services{

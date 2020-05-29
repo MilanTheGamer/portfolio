@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+body, html {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.front {
+  background: #fff;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-animation: slide 0.8s ease-in-out;
+          animation: slide 0.8s ease-in-out;
+}
+
+.front p {
+  padding-left: 15vw;
+  padding-top: 40vh;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 56px;
+}
+
+.front p span {
+  font-weight: 600;
+  background: -webkit-gradient(linear, left top, right top, from(#21D4FD), to(#B721FF));
+  background: linear-gradient(to right, #21D4FD, #B721FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.front .more {
+  margin-left: 15vw;
+  width: 175px;
+  padding: 5px 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 1000;
+  font-size: 27px;
+  line-height: 32px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  background: -webkit-gradient(linear, left top, right top, from(#21D4FD), to(#B721FF));
+  background: linear-gradient(to right, #21D4FD, #B721FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -o-border-image: linear-gradient(to right, #21D4FD, #B721FF);
+     border-image: -webkit-gradient(linear, left top, right top, from(#21D4FD), to(#B721FF));
+     border-image: linear-gradient(to right, #21D4FD, #B721FF);
+  border-image-slice: 1;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+.front .more:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#21D4FD), to(#B721FF));
+  background: linear-gradient(to right, #21D4FD, #B721FF);
+  -webkit-background-clip: none;
+  -webkit-text-fill-color: white;
+}
+
+.front .more:focus {
+  outline: none;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0.1;
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0.1;
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+.expanded {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.expanded .background {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: -500;
+}
+
+.details {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: -500;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+}
+
+.details .profile {
+  width: 50vw;
+}
+
+.details .profile .profilePic {
+  position: relative;
+  top: 10vw;
+  left: 10vw;
+  margin: 0;
+  padding: 0;
+  width: 20vw;
+}
+
+.details .profile div {
+  position: relative;
+  top: 10vw;
+  left: 11vw;
+  margin-top: 1vw;
+}
+
+.details .profile div h3 {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5vw;
+  line-height: 1.1;
+}
+
+.details .profile div h3.designation {
+  font-size: 2vw;
+  margin-left: 7vw;
+}
+
+.details .services {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+.details .services .serviceHeader {
+  margin-top: 10vw;
+  margin-bottom: 0;
+  font-size: 3vw;
+}
+
+.details .services .serviceGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+}
+
+.details .services .serviceGrid div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0;
+  padding: 5px;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.details .services .serviceGrid div img {
+  width: 5vw;
+  height: 5vw;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.details .services .serviceGrid div .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+  margin-left: 5px;
+  justify-items: center;
+  line-height: 1.3;
+}
+
+.details .services .serviceGrid div .description h5 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5vw;
+}
+
+.details .services .serviceGrid div .description p {
+  margin: 0;
+  padding: 0;
+  font-size: 1vw;
+}
+/*# sourceMappingURL=style.css.map */

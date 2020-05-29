@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+body,html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.front{
+    background: #fff;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    animation: slide 0.8s ease-in-out;
+    p{
+        padding-left: 15vw;
+        padding-top: 40vh;
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 56px;
+
+        span{
+            font-weight: 600;
+            background: linear-gradient(to right ,#21D4FD ,#B721FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    .more{
+        margin-left: 15vw;
+        width:175px;
+        padding: 5px 0px;
+        justify-content: center;
+        text-align: center;
+        align-content: center;
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        font-weight: 1000;
+        font-size: 27px;
+        line-height: 32px;
+        transition: all 0.5s ease-in-out;
+
+        background: linear-gradient(to right ,#21D4FD ,#B721FF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border-image: linear-gradient(to right ,#21D4FD ,#B721FF);
+        border-image-slice: 1;
+        transition: transform 0.5s ease-in-out;
+
+        &:hover{
+            background: linear-gradient(to right ,#21D4FD ,#B721FF);
+            -webkit-background-clip: none;
+            -webkit-text-fill-color: white;
+        }
+        &:focus{
+            outline: none;
+            transform: scale(0.9);
+        }
+    }
+}
+
+@keyframes slide{
+    0%{
+        opacity: 0.1;
+        transform: translateX(-300px);
+    }
+    90%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.expanded{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    .background{
+        position: absolute;
+        width:100%;
+        height: auto;
+        z-index: -500;
+    } 
+}
+
+.details{
+    width: 100%;
+    height:auto;
+    position: absolute;
+    z-index: -500;
+    display: grid;
+    grid-template-columns: auto auto;
+
+    .profile{
+        width: 50vw;
+        .profilePic{
+            position: relative;
+            top: 10vw;
+            left:10vw;
+            margin: 0;
+            padding: 0;
+            width: 20vw;
+        }
+        div{
+            position: relative;
+            top: 10vw;
+            left:11vw;
+            margin-top:1vw;
+            
+            h3{
+                padding: 0;
+                margin: 0;
+                color: #fff;
+                font-family: 'Poppins', sans-serif;
+                font-size:2.5vw ;
+                line-height: 1.1;
+                
+                &.designation{
+                    font-size: 2vw ;
+                    margin-left: 7vw;
+                }
+            }
+        }
+        
+    }
+    .services{
+        font-family: 'Poppins', sans-serif;
+        color: #fff;
+        .serviceHeader{
+            margin-top: 10vw;
+            margin-bottom: 0;
+            font-size:3vw ;
+        }
+        .serviceGrid{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+
+            div{
+                display: flex;
+                flex-direction: row;
+                margin: 0;
+                padding: 5px;
+                align-self: center;
+                img{
+                    width: 5vw;
+                    height: 5vw;
+                    align-self: center;
+                }
+                .description{
+                    display: flex;
+                    flex-direction: column;
+                    width: 60%;
+                    margin-left: 5px;
+                    justify-items: center;
+                    line-height: 1.3;
+                    h5{
+                        margin: 0;
+                        padding: 0;
+                        font-size: 1.5vw;
+                        
+                    }
+                    p{
+                        margin: 0;
+                        padding: 0;
+                        font-size: 1vw;
+                    }
+                }
+            }
+        }
+    }
+    
+}

@@ -343,7 +343,7 @@ body, html {
 
 @media (max-width: 720px) {
   .details .services .serviceGrid {
-    margin-left: 5vw;
+    margin-left: 2vw;
     margin-top: 2vw;
     -ms-grid-columns: auto auto;
         grid-template-columns: auto auto;

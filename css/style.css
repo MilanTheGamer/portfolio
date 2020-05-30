@@ -366,6 +366,12 @@ body, html {
       align-self: center;
 }
 
+@media (max-width: 720px) {
+  .details .services .serviceGrid div {
+    padding-left: 0px;
+  }
+}
+
 .details .services .serviceGrid div img {
   width: 5vw;
   height: 5vw;
